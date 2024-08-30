@@ -163,10 +163,10 @@ void app_main(void) {
     // Configuración del LED para parpadeo
     tipo_led leds;
     leds.n_led = 2;          // Número del LED a controlar. En este caso, el LED 2.
-    leds.n_ciclos = 6;       // Número de ciclos de encendido/apagado. El LED parpadeará 6 veces.
-    leds.periodo = 1000;     // Periodo de encendido/apagado en milisegundos. Cada ciclo durará 1 segundo.
-    leds.mode = ON;          // Modo de operación del LED. Puede ser ON, OFF o TOGGLE.    LedsInit();
-    //leds.mode = TOGGLE;    // Cambiado a TOGGLE para cumplir el objetivo de encender y apagar en ciclos
+    leds.n_ciclos = 10;       // Número de ciclos de encendido/apagado. El LED parpadeará 10 veces.
+    leds.periodo = 500;     // Periodo de encendido/apagado en milisegundos. Cada ciclo durará 1 segundo.
+    //leds.mode = ON;          // Modo de operación del LED. Puede ser ON, OFF o TOGGLE.    LedsInit();
+    leds.mode = TOGGLE;    // Cambiado a TOGGLE para cumplir el objetivo de encender y apagar en ciclos
     funcion_leds(&leds);
 }
 /*==================[end of file]==========================================*/
