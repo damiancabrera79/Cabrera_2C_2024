@@ -1,0 +1,368 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Guía 2 - Ejercicio 1: Referencia del Archivo C:/Repositorios/Cabrera_2C_2024/firmware/projects/Guia_2_EJE_1/main/main.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Guía 2 - Ejercicio 1<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Este programa controla el encendido y apagado de LEDs, la lectura mediante un sensor de distancia HC-SR04 y la visualización de la distancia en un display LCDITSE0803 utilizando un ESP32.</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('main_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">defines</a> &#124;
+<a href="#func-members">Funciones</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">Referencia del Archivo main.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &quot;freertos/FreeRTOS.h&quot;</code><br />
+<code>#include &quot;freertos/task.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="led_8h_source.html">led.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="hc__sr04_8h_source.html">hc_sr04.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lcditse0803_8h_source.html">lcditse0803.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="switch_8h_source.html">switch.h</a>&quot;</code><br />
+</div>
+<p><a href="main_8c_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:a8d4934421b1452242eeba9c63aba2e86"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a8d4934421b1452242eeba9c63aba2e86">CONFIG_BLINK_PERIOD_1000</a>&#160;&#160;&#160;1000</td></tr>
+<tr class="memdesc:a8d4934421b1452242eeba9c63aba2e86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Período de refresco del display en milisegundos.  <a href="main_8c.html#a8d4934421b1452242eeba9c63aba2e86">Más...</a><br /></td></tr>
+<tr class="separator:a8d4934421b1452242eeba9c63aba2e86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef6364d73d7d32b053ffe46be262571b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#aef6364d73d7d32b053ffe46be262571b">CONFIG_BLINK_PERIOD_200</a>&#160;&#160;&#160;200</td></tr>
+<tr class="memdesc:aef6364d73d7d32b053ffe46be262571b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Período de comprobación de switches en milisegundos.  <a href="main_8c.html#aef6364d73d7d32b053ffe46be262571b">Más...</a><br /></td></tr>
+<tr class="separator:aef6364d73d7d32b053ffe46be262571b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a630544a7f0a2cc40d8a7fefab7e2fe70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70">app_main</a> (void)</td></tr>
+<tr class="memdesc:a630544a7f0a2cc40d8a7fefab7e2fe70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Función principal del programa que inicializa los periféricos (LEDs, switches, sensor de distancia y display LCD) y crea las tareas FreeRTOS que manejan los diferentes componentes del sistema.  <a href="main_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70">Más...</a><br /></td></tr>
+<tr class="separator:a630544a7f0a2cc40d8a7fefab7e2fe70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a95cd69e5bbc71f74ee21a0777d06efde"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a95cd69e5bbc71f74ee21a0777d06efde">activar</a> = true</td></tr>
+<tr class="memdesc:a95cd69e5bbc71f74ee21a0777d06efde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variable booleana global que registra si el sistema está activado o desactivado.  <a href="main_8c.html#a95cd69e5bbc71f74ee21a0777d06efde">Más...</a><br /></td></tr>
+<tr class="separator:a95cd69e5bbc71f74ee21a0777d06efde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae524c3e8ce8bf4c503c7d8a1f79bea5f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ae524c3e8ce8bf4c503c7d8a1f79bea5f">hold</a> = false</td></tr>
+<tr class="memdesc:ae524c3e8ce8bf4c503c7d8a1f79bea5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variable booleana global que registra si el display está congelado o en modo normal.  <a href="main_8c.html#ae524c3e8ce8bf4c503c7d8a1f79bea5f">Más...</a><br /></td></tr>
+<tr class="separator:ae524c3e8ce8bf4c503c7d8a1f79bea5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3d7dcae55f8c7615dae03e258a1f5b1"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ae3d7dcae55f8c7615dae03e258a1f5b1">distancia</a></td></tr>
+<tr class="memdesc:ae3d7dcae55f8c7615dae03e258a1f5b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variable uint16_t que almacena el valor de la distancia medida por el sensor HC-SR04.  <a href="main_8c.html#ae3d7dcae55f8c7615dae03e258a1f5b1">Más...</a><br /></td></tr>
+<tr class="separator:ae3d7dcae55f8c7615dae03e258a1f5b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf1e080dda37a3cfbdfc007e0e03fb53"><td class="memItemLeft" align="right" valign="top">TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#adf1e080dda37a3cfbdfc007e0e03fb53">sensar_task_handle</a> = <a class="el" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td></tr>
+<tr class="memdesc:adf1e080dda37a3cfbdfc007e0e03fb53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identificador de la tarea que se encarga de realizar la medición de distancia.  <a href="main_8c.html#adf1e080dda37a3cfbdfc007e0e03fb53">Más...</a><br /></td></tr>
+<tr class="separator:adf1e080dda37a3cfbdfc007e0e03fb53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e7d9b53929a53988c10c11a366ed8ac"><td class="memItemLeft" align="right" valign="top">TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a9e7d9b53929a53988c10c11a366ed8ac">leds_task_handle</a> = <a class="el" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td></tr>
+<tr class="memdesc:a9e7d9b53929a53988c10c11a366ed8ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identificador de la tarea que se encarga de encender y apagar los LEDs según la distancia.  <a href="main_8c.html#a9e7d9b53929a53988c10c11a366ed8ac">Más...</a><br /></td></tr>
+<tr class="separator:a9e7d9b53929a53988c10c11a366ed8ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a112ff2c9513c3581b3c6c85dbf49d14e"><td class="memItemLeft" align="right" valign="top">TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a112ff2c9513c3581b3c6c85dbf49d14e">display_task_handle</a> = <a class="el" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td></tr>
+<tr class="memdesc:a112ff2c9513c3581b3c6c85dbf49d14e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identificador de la tarea que se encarga de actualizar la información en el display.  <a href="main_8c.html#a112ff2c9513c3581b3c6c85dbf49d14e">Más...</a><br /></td></tr>
+<tr class="separator:a112ff2c9513c3581b3c6c85dbf49d14e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0f0388ffe039225c986c27e14a3011e"><td class="memItemLeft" align="right" valign="top">TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ad0f0388ffe039225c986c27e14a3011e">switches_task_handle</a> = <a class="el" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td></tr>
+<tr class="memdesc:ad0f0388ffe039225c986c27e14a3011e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identificador de la tarea que se encarga de detectar la pulsación de los botones.  <a href="main_8c.html#ad0f0388ffe039225c986c27e14a3011e">Más...</a><br /></td></tr>
+<tr class="separator:ad0f0388ffe039225c986c27e14a3011e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentación de los 'defines'</h2>
+<a id="a8d4934421b1452242eeba9c63aba2e86" name="a8d4934421b1452242eeba9c63aba2e86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d4934421b1452242eeba9c63aba2e86">&#9670;&nbsp;</a></span>CONFIG_BLINK_PERIOD_1000</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONFIG_BLINK_PERIOD_1000&#160;&#160;&#160;1000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Período de refresco del display en milisegundos. </p>
+<p >Esta macro define el intervalo de tiempo en milisegundos (1000 ms) para el refresco de la pantalla, lo que equivale a una actualización cada segundo. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="main_8c_source.html#l00070">70</a> del archivo <a class="el" href="main_8c_source.html">main.c</a>.</p>
+
+</div>
+</div>
+<a id="aef6364d73d7d32b053ffe46be262571b" name="aef6364d73d7d32b053ffe46be262571b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef6364d73d7d32b053ffe46be262571b">&#9670;&nbsp;</a></span>CONFIG_BLINK_PERIOD_200</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONFIG_BLINK_PERIOD_200&#160;&#160;&#160;200</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Período de comprobación de switches en milisegundos. </p>
+<p >Esta macro define el intervalo de tiempo en milisegundos (200 ms) para comprobar si se ha presionado algún switch o botón. La verificación ocurre cada 200 ms. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="main_8c_source.html#l00079">79</a> del archivo <a class="el" href="main_8c_source.html">main.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las funciones</h2>
+<a id="a630544a7f0a2cc40d8a7fefab7e2fe70" name="a630544a7f0a2cc40d8a7fefab7e2fe70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a630544a7f0a2cc40d8a7fefab7e2fe70">&#9670;&nbsp;</a></span>app_main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void app_main </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Función principal del programa que inicializa los periféricos (LEDs, switches, sensor de distancia y display LCD) y crea las tareas FreeRTOS que manejan los diferentes componentes del sistema. </p>
+<p >En esta función se configuran los siguientes periféricos:</p><ul>
+<li>Inicialización de LEDs con <code><a class="el" href="group___l_e_d.html#gacba669c3e8f52e45d1bea50c2e63b250" title="ESP-EDU LEDs initialization.">LedsInit()</a></code>.</li>
+<li>Inicialización de los botones o switches con <code><a class="el" href="group___switch.html#ga8eb2865a73bf2d2b9fd6760958a0cc3c" title="ESP-EDU switches initialization.">SwitchesInit()</a></code>.</li>
+<li>Inicialización del sensor de distancia HC-SR04 con <code><a class="el" href="group___h_c___s_r04.html#ga9d26cc017fe45c607d08231ebffb46c4" title="Driver for reading distance with HC-SR04 module.">HcSr04Init()</a></code>.</li>
+<li>Inicialización del display LCD ITSE0803 con <code><a class="el" href="group___l_c_d___i_t_s_e0803.html#ga1c08a1458380c8f0a02a3763d14c8bf3" title="Driver for using the 3 digits numeric display in ESP-EDU.">LcdItsE0803Init()</a></code>.</li>
+</ul>
+<p >Luego, se crean cuatro tareas con FreeRTOS para ejecutar en paralelo:</p><ul>
+<li><code>SwitchesTask</code>: Lee los botones y activa o desactiva el sistema, o congela el valor del display.</li>
+<li><code>SensarTask</code>: Mide la distancia usando el sensor HC-SR04.</li>
+<li><code>LedsTask</code>: Enciende o apaga los LEDs según la distancia medida.</li>
+<li><code>DisplayTask</code>: Muestra la distancia en el display y permite congelar la lectura. </li>
+</ul>
+<p >Creación de las tareas en FreeRTOS</p>
+
+<p class="definition">Definición en la línea <a class="el" href="main_8c_source.html#l00262">262</a> del archivo <a class="el" href="main_8c_source.html">main.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="gpio__mcu_8h_source.html#l00054">GPIO_2</a>, <a class="el" href="gpio__mcu_8h_source.html#l00055">GPIO_3</a>, <a class="el" href="hc__sr04_8c_source.html#l00034">HcSr04Init()</a>, <a class="el" href="lcditse0803_8c_source.html#l00037">LcdItsE0803Init()</a>, <a class="el" href="led_8c_source.html#l00031">LedsInit()</a> y <a class="el" href="switch_8c_source.html#l00029">SwitchesInit()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las variables</h2>
+<a id="a95cd69e5bbc71f74ee21a0777d06efde" name="a95cd69e5bbc71f74ee21a0777d06efde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95cd69e5bbc71f74ee21a0777d06efde">&#9670;&nbsp;</a></span>activar</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">activar = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Variable booleana global que registra si el sistema está activado o desactivado. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="main_8c_source.html#l00084">84</a> del archivo <a class="el" href="main_8c_source.html">main.c</a>.</p>
+
+</div>
+</div>
+<a id="a112ff2c9513c3581b3c6c85dbf49d14e" name="a112ff2c9513c3581b3c6c85dbf49d14e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a112ff2c9513c3581b3c6c85dbf49d14e">&#9670;&nbsp;</a></span>display_task_handle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">display_task_handle = <a class="el" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Identificador de la tarea que se encarga de actualizar la información en el display. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="main_8c_source.html#l00115">115</a> del archivo <a class="el" href="main_8c_source.html">main.c</a>.</p>
+
+</div>
+</div>
+<a id="ae3d7dcae55f8c7615dae03e258a1f5b1" name="ae3d7dcae55f8c7615dae03e258a1f5b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3d7dcae55f8c7615dae03e258a1f5b1">&#9670;&nbsp;</a></span>distancia</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">distancia</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Variable uint16_t que almacena el valor de la distancia medida por el sensor HC-SR04. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="main_8c_source.html#l00095">95</a> del archivo <a class="el" href="main_8c_source.html">main.c</a>.</p>
+
+</div>
+</div>
+<a id="ae524c3e8ce8bf4c503c7d8a1f79bea5f" name="ae524c3e8ce8bf4c503c7d8a1f79bea5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae524c3e8ce8bf4c503c7d8a1f79bea5f">&#9670;&nbsp;</a></span>hold</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">hold = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Variable booleana global que registra si el display está congelado o en modo normal. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="main_8c_source.html#l00089">89</a> del archivo <a class="el" href="main_8c_source.html">main.c</a>.</p>
+
+</div>
+</div>
+<a id="a9e7d9b53929a53988c10c11a366ed8ac" name="a9e7d9b53929a53988c10c11a366ed8ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e7d9b53929a53988c10c11a366ed8ac">&#9670;&nbsp;</a></span>leds_task_handle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">leds_task_handle = <a class="el" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Identificador de la tarea que se encarga de encender y apagar los LEDs según la distancia. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="main_8c_source.html#l00109">109</a> del archivo <a class="el" href="main_8c_source.html">main.c</a>.</p>
+
+</div>
+</div>
+<a id="adf1e080dda37a3cfbdfc007e0e03fb53" name="adf1e080dda37a3cfbdfc007e0e03fb53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf1e080dda37a3cfbdfc007e0e03fb53">&#9670;&nbsp;</a></span>sensar_task_handle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sensar_task_handle = <a class="el" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Identificador de la tarea que se encarga de realizar la medición de distancia. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="main_8c_source.html#l00103">103</a> del archivo <a class="el" href="main_8c_source.html">main.c</a>.</p>
+
+</div>
+</div>
+<a id="ad0f0388ffe039225c986c27e14a3011e" name="ad0f0388ffe039225c986c27e14a3011e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0f0388ffe039225c986c27e14a3011e">&#9670;&nbsp;</a></span>switches_task_handle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">switches_task_handle = <a class="el" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Identificador de la tarea que se encarga de detectar la pulsación de los botones. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="main_8c_source.html#l00121">121</a> del archivo <a class="el" href="main_8c_source.html">main.c</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a class="el" href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a class="el" href="dir_d506d343982fc67b5eb54406d0486feb.html">Guia_2_EJE_1</a></li><li class="navelem"><a class="el" href="dir_2360335fa3b5b48df973f32576808fde.html">main</a></li><li class="navelem"><a class="el" href="main_8c.html">main.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
+</body>
+</html>
