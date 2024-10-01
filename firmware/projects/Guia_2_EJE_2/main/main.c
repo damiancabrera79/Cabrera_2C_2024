@@ -4,7 +4,7 @@
  * Este programa controla el encendido y apagado de LEDs, la lectura de un sensor de distancia HC-SR04,
  * y la visualización de la distancia en un display LCDITSE0803 utilizando un ESP32. 
  * 
- * * El sistema utiliza:
+ * El sistema utiliza:
 * - Las interrupciones para el control de las teclas y para el control de tiempos Timers. 
  * 
  * El sistema permite:
