@@ -1,0 +1,146 @@
+\hypertarget{main_8c}{}\doxysection{Referencia del Archivo C\+:/\+Repositorios/\+Cabrera\+\_\+2\+C\+\_\+2024/firmware/projects/\+Guia\+\_\+2\+\_\+\+EJE\+\_\+4/main/main.c}
+\label{main_8c}\index{C:/Repositorios/Cabrera\_2C\_2024/firmware/projects/Guia\_2\_EJE\_4/main/main.c@{C:/Repositorios/Cabrera\_2C\_2024/firmware/projects/Guia\_2\_EJE\_4/main/main.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}freertos/\+Free\+RTOS.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}freertos/task.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}analog\+\_\+io\+\_\+mcu.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}uart\+\_\+mcu.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}timer\+\_\+mcu.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gpio\+\_\+mcu.\+h\char`\"{}}\newline
+\doxysubsection*{defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{main_8c_aed3a546333c148b9745c06ccc3554087}{CONFIG\+\_\+\+PERIOD\+\_\+u\+S\+\_\+A}}~2000
+\begin{DoxyCompactList}\small\item\em Período del Timer A en microsegundos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8c_ac4eebe83f587ab40ed41d5ab37cbabe6}{funcion\+TimerA}} (void $\ast$p\+Param)
+\begin{DoxyCompactList}\small\item\em Función que se ejecuta en la interrupción del Timer A. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_aa524beeb8a91ae408c7195f14a0e8e83}{funcion\+UART}} (void $\ast$param)
+\begin{DoxyCompactList}\small\item\em Función de la UART (aún no utilizada). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_a630544a7f0a2cc40d8a7fefab7e2fe70}{app\+\_\+main}} (void)
+\begin{DoxyCompactList}\small\item\em Función principal de la aplicación. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{main_8c_a791cb5180d340c502fafb34b69e71970}{valores}}
+\begin{DoxyCompactList}\small\item\em Variable global para almacenar el valor leído del ADC. \end{DoxyCompactList}\item 
+Task\+Handle\+\_\+t \mbox{\hyperlink{main_8c_a6065c5255ab9912f1e3d1e9a5d504848}{conversion\+\_\+\+ADC\+\_\+task\+\_\+handle}} = NULL
+\begin{DoxyCompactList}\small\item\em Handle de la tarea encargada de la conversión ADC. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de los \textquotesingle{}defines\textquotesingle{}}
+\mbox{\Hypertarget{main_8c_aed3a546333c148b9745c06ccc3554087}\label{main_8c_aed3a546333c148b9745c06ccc3554087}} 
+\index{main.c@{main.c}!CONFIG\_PERIOD\_uS\_A@{CONFIG\_PERIOD\_uS\_A}}
+\index{CONFIG\_PERIOD\_uS\_A@{CONFIG\_PERIOD\_uS\_A}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{CONFIG\_PERIOD\_uS\_A}{CONFIG\_PERIOD\_uS\_A}}
+{\footnotesize\ttfamily \#define CONFIG\+\_\+\+PERIOD\+\_\+u\+S\+\_\+A~2000}
+
+
+
+Período del Timer A en microsegundos. 
+
+2ms período del Timer 
+
+Definición en la línea \mbox{\hyperlink{main_8c_source_l00046}{46}} del archivo \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+
+
+\doxysubsection{Documentación de las funciones}
+\mbox{\Hypertarget{main_8c_a630544a7f0a2cc40d8a7fefab7e2fe70}\label{main_8c_a630544a7f0a2cc40d8a7fefab7e2fe70}} 
+\index{main.c@{main.c}!app\_main@{app\_main}}
+\index{app\_main@{app\_main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{app\_main()}{app\_main()}}
+{\footnotesize\ttfamily void app\+\_\+main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Función principal de la aplicación. 
+
+Esta función inicializa el ADC, el Timer, la UART y crea la tarea de conversión ADC. El timer dispara la conversión ADC cada 2 ms, y los valores son enviados por UART. \texorpdfstring{$<$}{<} Inicializa el canal ADC
+
+\texorpdfstring{$<$}{<} Inicializa la salida analógica
+
+\texorpdfstring{$<$}{<} Inicialización del Timer A
+
+\texorpdfstring{$<$}{<} Inicializo la UART
+
+\texorpdfstring{$<$}{<} Inicio del Timer A
+
+Definición en la línea \mbox{\hyperlink{main_8c_source_l00116}{116}} del archivo \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\mbox{\Hypertarget{main_8c_ac4eebe83f587ab40ed41d5ab37cbabe6}\label{main_8c_ac4eebe83f587ab40ed41d5ab37cbabe6}} 
+\index{main.c@{main.c}!funcionTimerA@{funcionTimerA}}
+\index{funcionTimerA@{funcionTimerA}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{funcionTimerA()}{funcionTimerA()}}
+{\footnotesize\ttfamily void funcion\+TimerA (\begin{DoxyParamCaption}\item[{void $\ast$}]{p\+Param }\end{DoxyParamCaption})}
+
+
+
+Función que se ejecuta en la interrupción del Timer A. 
+
+Esta función es llamada por la interrupción del timer y notifica a la tarea ADC que realice una nueva conversión.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em p\+Param} & Puntero a los parámetros de la función (no se utiliza). \\
+\hline
+\end{DoxyParams}
+\texorpdfstring{$<$}{<} Notificación a la tarea ADC
+
+Definición en la línea \mbox{\hyperlink{main_8c_source_l00093}{93}} del archivo \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\mbox{\Hypertarget{main_8c_aa524beeb8a91ae408c7195f14a0e8e83}\label{main_8c_aa524beeb8a91ae408c7195f14a0e8e83}} 
+\index{main.c@{main.c}!funcionUART@{funcionUART}}
+\index{funcionUART@{funcionUART}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{funcionUART()}{funcionUART()}}
+{\footnotesize\ttfamily void funcion\+UART (\begin{DoxyParamCaption}\item[{void $\ast$}]{param }\end{DoxyParamCaption})}
+
+
+
+Función de la UART (aún no utilizada). 
+
+En esta función se podría manejar la lectura de datos desde la UART en caso de ser necesario.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em param} & Puntero a los parámetros de la función (no se utiliza). \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{main_8c_source_l00104}{104}} del archivo \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+
+
+\doxysubsection{Documentación de las variables}
+\mbox{\Hypertarget{main_8c_a6065c5255ab9912f1e3d1e9a5d504848}\label{main_8c_a6065c5255ab9912f1e3d1e9a5d504848}} 
+\index{main.c@{main.c}!conversion\_ADC\_task\_handle@{conversion\_ADC\_task\_handle}}
+\index{conversion\_ADC\_task\_handle@{conversion\_ADC\_task\_handle}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{conversion\_ADC\_task\_handle}{conversion\_ADC\_task\_handle}}
+{\footnotesize\ttfamily Task\+Handle\+\_\+t conversion\+\_\+\+ADC\+\_\+task\+\_\+handle = NULL}
+
+
+
+Handle de la tarea encargada de la conversión ADC. 
+
+Handle de la tarea ADC 
+
+Definición en la línea \mbox{\hyperlink{main_8c_source_l00058}{58}} del archivo \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\mbox{\Hypertarget{main_8c_a791cb5180d340c502fafb34b69e71970}\label{main_8c_a791cb5180d340c502fafb34b69e71970}} 
+\index{main.c@{main.c}!valores@{valores}}
+\index{valores@{valores}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{valores}{valores}}
+{\footnotesize\ttfamily uint16\+\_\+t valores}
+
+
+
+Variable global para almacenar el valor leído del ADC. 
+
+Valor leído del ADC 
+
+Definición en la línea \mbox{\hyperlink{main_8c_source_l00051}{51}} del archivo \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
