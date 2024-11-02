@@ -9,6 +9,7 @@
  * |   Date	    | Description                                    |
  * |:----------:|:-----------------------------------------------|
  * | 12/09/2023 | Document creation		                         |
+ * | 02/11/2024 | Probando GIT con VSCode                        |
  *
  * @author Albano Peñalva (albano.penalva@uner.edu.ar)
  *
