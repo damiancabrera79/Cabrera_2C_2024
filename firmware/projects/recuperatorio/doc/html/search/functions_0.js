@@ -8,5 +8,5 @@ var searchData=
   ['analogstartcontinuous_5',['AnalogStartContinuous',['../group___analog___i_o.html#ga59d18db7ff84dc756b4a66f5331a23eb',1,'AnalogStartContinuous(adc_ch_t channel):&#160;analog_io_mcu.c'],['../group___analog___i_o.html#ga59d18db7ff84dc756b4a66f5331a23eb',1,'AnalogStartContinuous(adc_ch_t channel):&#160;analog_io_mcu.c']]],
   ['analogstopcontinuous_6',['AnalogStopContinuous',['../group___analog___i_o.html#gaea40f5dd5d020c0854734479d52458c2',1,'AnalogStopContinuous(adc_ch_t channel):&#160;analog_io_mcu.c'],['../group___analog___i_o.html#gaea40f5dd5d020c0854734479d52458c2',1,'AnalogStopContinuous(adc_ch_t channel):&#160;analog_io_mcu.c']]],
   ['angle2dutycicle_7',['Angle2DutyCicle',['../servo__sg90_8c.html#a03ba1a24bc9550bccedcb7ed8f014553',1,'servo_sg90.c']]],
-  ['app_5fmain_8',['app_main',['../examen_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70',1,'examen.c']]]
+  ['app_5fmain_8',['app_main',['../recuperatorio_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70',1,'recuperatorio.c']]]
 ];

@@ -36,7 +36,6 @@ var searchData=
   ['esp_5fhidd_5fsta_5fconn_5fsuccess_33',['ESP_HIDD_STA_CONN_SUCCESS',['../ble__hid__mcu_8c.html#a586b8e50bea5f04b30a557a556264ed4a7fcd7d664c626bb5096c466ad536c07e',1,'ble_hid_mcu.c']]],
   ['esp_5fspp_5fapp_5fid_34',['ESP_SPP_APP_ID',['../ble__mcu_8c.html#a538f72549db4fcdae32d19eb41d8aeb6',1,'ble_mcu.c']]],
   ['event_5fqueue_5fsize_35',['EVENT_QUEUE_SIZE',['../uart__mcu_8c.html#a3d16e5de491dfd7c361575b398679dd3',1,'uart_mcu.c']]],
-  ['everest_36',['everest',['../projects_2examen_2build_2_c_make_cache_8txt.html#ae2cc11278f32ce51d46120fb0dbea4fb',1,'CMakeCache.txt']]],
-  ['examen_2ec_37',['examen.c',['../examen_8c.html',1,'']]],
-  ['exponent_38',['exponent',['../structprf__char__pres__fmt.html#af05d5abe7656953548edfb3eb5117659',1,'prf_char_pres_fmt']]]
+  ['everest_36',['everest',['../projects_2recuperatorio_2build_2_c_make_cache_8txt.html#ae2cc11278f32ce51d46120fb0dbea4fb',1,'CMakeCache.txt']]],
+  ['exponent_37',['exponent',['../structprf__char__pres__fmt.html#af05d5abe7656953548edfb3eb5117659',1,'prf_char_pres_fmt']]]
 ];

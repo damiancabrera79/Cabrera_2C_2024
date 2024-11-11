@@ -9,6 +9,5 @@ var searchData=
   ['buffer_6',['buffer',['../mpu6050_8c.html#a174887a700c9f9e196a6504506d757e7',1,'mpu6050.c']]],
   ['bundlea_7',['bundleA',['../gpio__fast__out__mcu_8c.html#a49b3a59d5cb43369da07eeec78bdeb78',1,'gpio_fast_out_mcu.c']]],
   ['bundlea_5fgpios_8',['bundleA_gpios',['../gpio__fast__out__mcu_8c.html#a618b0d089ac040bd855239d414877886',1,'gpio_fast_out_mcu.c']]],
-  ['bus_5fcfg_9',['bus_cfg',['../spi__mcu_8c.html#acff5631217f27db20d7049cd58791eaf',1,'spi_mcu.c']]],
-  ['buzzer_10',['buzzer',['../examen_8c.html#a9fdff21fd798b57cf48346d668b79845',1,'examen.c']]]
+  ['bus_5fcfg_9',['bus_cfg',['../spi__mcu_8c.html#acff5631217f27db20d7049cd58791eaf',1,'spi_mcu.c']]]
 ];

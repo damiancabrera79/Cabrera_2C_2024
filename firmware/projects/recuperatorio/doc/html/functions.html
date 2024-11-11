@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Alerta para ciclistas: Campos de datos</title>
+<title>Recuperatorio 11-11-2024 - Sistema de pesaje de camiones basado en la placa ESP-EDU: Campos de datos</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,9 +31,9 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Alerta para ciclistas<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">Recuperatorio 11-11-2024 - Sistema de pesaje de camiones basado en la placa ESP-EDU<span id="projectnumber">&#160;1.0</span>
    </div>
-   <div id="projectbrief">Dispositivo basado en la ESP-EDU que permita detectar eventos peligrosos para ciclista</div>
+   <div id="projectbrief">Sistema de pesaje de camiones basado en la placa ESP-EDU que verifica la velocidad de ingreso de los vehículos y pesa el vehículo cuando se detiene. El sistema utiliza un sensor de distancia HC-SR04 para medir la velocidad y dos galgas para medir el peso. Los LEDs de la ESP-EDU se utilizan como señales de advertencia de velocidad. El sistema envía el peso y la velocidad máxima del vehículo a la PC del operario a través de la UART y permite controlar la apertura y cierre de una barrera mediante comandos enviados desde la PC</div>
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -171,6 +171,7 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 <li>hidFlags&#160;:&#160;<a class="el" href="structhid__dev__cfg__t.html#a11563208acc8e846560342314084748d">hid_dev_cfg_t</a></li>
 <li>hids_nb&#160;:&#160;<a class="el" href="structhidd__inst__t.html#a495699a2ab108b1a8a3b946a36b50979">hidd_inst_t</a></li>
 <li>hour&#160;:&#160;<a class="el" href="structrtc__t.html#ae5af4ff48939d13d480f87e56a9385d6">rtc_t</a></li>
+<li>humidity&#160;:&#160;<a class="el" href="structdht11__reading.html#a405f237eaa8a513a9682fbb6e44c4860">dht11_reading</a></li>
 </ul>
 
 
@@ -246,12 +247,14 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 <li>spp_conn_id&#160;:&#160;<a class="el" href="struct_c_m_d__t.html#a344672121a59fb6bba3f67f9bb1c31fb">CMD_t</a></li>
 <li>spp_gatts_if&#160;:&#160;<a class="el" href="struct_c_m_d__t.html#a39d90351e65b52b2933f34b350c2bb1d">CMD_t</a></li>
 <li>state&#160;:&#160;<a class="el" href="structdigital__io__t.html#ab30ba07e2a0bd07a15e45a92c32db9c5">digital_io_t</a>, <a class="el" href="structesp__hidd__cb__param__t_1_1hidd__deinit__finish__evt__param.html#a69b6230f92e6ed19025fe9bdf9ddd524">esp_hidd_cb_param_t::hidd_deinit_finish_evt_param</a>, <a class="el" href="structesp__hidd__cb__param__t_1_1hidd__init__finish__evt__param.html#aaf0c455b3f346157a49bd3ef70098a9b">esp_hidd_cb_param_t::hidd_init_finish_evt_param</a></li>
+<li>status&#160;:&#160;<a class="el" href="structdht11__reading.html#a6e27f49150e9a14580fb313cc2777e00">dht11_reading</a></li>
 <li>svc_features&#160;:&#160;<a class="el" href="structhidd__feature__t.html#ae47fd301893a58a5e619aae839564441">hidd_feature_t</a></li>
 </ul>
 
 
 <h3><a id="index_t" name="index_t"></a>- t -</h3><ul>
 <li>taskHandle&#160;:&#160;<a class="el" href="struct_c_m_d__t.html#a856a4dc2365377e5fed42c5e1be72043">CMD_t</a></li>
+<li>temperature&#160;:&#160;<a class="el" href="structdht11__reading.html#a0ac2a299549fcca3cd14e4c1ac2087d2">dht11_reading</a></li>
 <li>timer&#160;:&#160;<a class="el" href="structtimer__config__t.html#ab83043b8038c5e630f6a2a05ea007e49">timer_config_t</a></li>
 <li>trans_id&#160;:&#160;<a class="el" href="structhidd__clcb__t.html#ac8afe9b7ed32bf4983b46f30e62e24c4">hidd_clcb_t</a></li>
 <li>transfer_mode&#160;:&#160;<a class="el" href="structspi__mcu__config__t.html#a84b3bf61c72f30449d7e3e1a389b9ea2">spi_mcu_config_t</a></li>

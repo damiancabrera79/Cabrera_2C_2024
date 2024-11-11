@@ -17,11 +17,12 @@ var searchData=
   ['dir_14',['dir',['../structgpio_config__t.html#a8f9801ec3144d1e53252a902330c58a1',1,'gpioConfig_t']]],
   ['disconnect_15',['disconnect',['../unionesp__hidd__cb__param__t.html#a64d7dd06fe8e2fd861596c80c6faaae6',1,'esp_hidd_cb_param_t']]],
   ['disp_5ffun_5fctrl_16',['disp_fun_ctrl',['../ili9341_8c.html#a1c5f9f3b3ce68b179a541aaeb825cd02',1,'ili9341.c']]],
-  ['distancia_17',['distancia',['../examen_8c.html#ae3d7dcae55f8c7615dae03e258a1f5b1',1,'examen.c']]],
-  ['dproject_5fsource_5fdir_18',['DPROJECT_SOURCE_DIR',['../bootloader-cfgcmd_8txt.html#a1d83e9a0af88ebe1ce48b704e0dc05d9',1,'bootloader-cfgcmd.txt']]],
-  ['dpython_19',['DPYTHON',['../bootloader-cfgcmd_8txt.html#ac3f061964764d81c905f3cfcd94818a1',1,'bootloader-cfgcmd.txt']]],
-  ['dpython_5fdeps_5fchecked_20',['DPYTHON_DEPS_CHECKED',['../bootloader-cfgcmd_8txt.html#adff3294f6aaf3cb0431699320441dbe3',1,'bootloader-cfgcmd.txt']]],
-  ['driv_5ftim_5fctrl_5fa_21',['driv_tim_ctrl_a',['../ili9341_8c.html#afc83c18e8d0854b8b4cdb9aca29c312b',1,'ili9341.c']]],
-  ['driv_5ftim_5fctrl_5fb_22',['driv_tim_ctrl_b',['../ili9341_8c.html#a9f16309f2f64840481039f862dac26e6',1,'ili9341.c']]],
-  ['dsdkconfig_23',['DSDKCONFIG',['../bootloader-cfgcmd_8txt.html#a77da9fc66e09bfd3c3055f99d4535476',1,'bootloader-cfgcmd.txt']]]
+  ['distance_17',['distance',['../recuperatorio_8c.html#a3139244bfb778557108cda2114f91f3f',1,'recuperatorio.c']]],
+  ['distance_5fsamples_18',['distance_samples',['../recuperatorio_8c.html#a86499db61c7fb22b7edc398554cbc9d9',1,'recuperatorio.c']]],
+  ['dproject_5fsource_5fdir_19',['DPROJECT_SOURCE_DIR',['../bootloader-cfgcmd_8txt.html#a1d83e9a0af88ebe1ce48b704e0dc05d9',1,'bootloader-cfgcmd.txt']]],
+  ['dpython_20',['DPYTHON',['../bootloader-cfgcmd_8txt.html#ac3f061964764d81c905f3cfcd94818a1',1,'bootloader-cfgcmd.txt']]],
+  ['dpython_5fdeps_5fchecked_21',['DPYTHON_DEPS_CHECKED',['../bootloader-cfgcmd_8txt.html#adff3294f6aaf3cb0431699320441dbe3',1,'bootloader-cfgcmd.txt']]],
+  ['driv_5ftim_5fctrl_5fa_22',['driv_tim_ctrl_a',['../ili9341_8c.html#afc83c18e8d0854b8b4cdb9aca29c312b',1,'ili9341.c']]],
+  ['driv_5ftim_5fctrl_5fb_23',['driv_tim_ctrl_b',['../ili9341_8c.html#a9f16309f2f64840481039f862dac26e6',1,'ili9341.c']]],
+  ['dsdkconfig_24',['DSDKCONFIG',['../bootloader-cfgcmd_8txt.html#a77da9fc66e09bfd3c3055f99d4535476',1,'bootloader-cfgcmd.txt']]]
 ];

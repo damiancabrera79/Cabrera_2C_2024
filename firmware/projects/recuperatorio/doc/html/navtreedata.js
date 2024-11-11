@@ -24,11 +24,13 @@
 */
 var NAVTREE =
 [
-  [ "Alerta para ciclistas", "index.html", [
-    [ "General Description", "index.html#genDesc", null ],
-    [ "Hardware Connection", "index.html#hardConn", null ],
-    [ "Changelog", "index.html#changelog", null ],
-    [ "Template", "md__c___repositorios__cabrera_2_c_2024_firmware_projects_examen__r_e_a_d_m_e.html", null ],
+  [ "Recuperatorio 11-11-2024 - Sistema de pesaje de camiones basado en la placa ESP-EDU", "index.html", [
+    [ "Sistema de pesaje de camiones basado en la placa ESP-EDU", "index.html", [
+      [ "General Description", "index.html#genDesc", null ],
+      [ "Hardware Connection", "index.html#hardConn", null ],
+      [ "Changelog", "index.html#changelog", null ]
+    ] ],
+    [ "Template", "md__c___repositorios__cabrera_2_c_2024_firmware_projects_recuperatorio__r_e_a_d_m_e.html", null ],
     [ "Módulos", "modules.html", "modules" ],
     [ "Estructuras de Datos", "annotated.html", [
       [ "Estructura de datos", "annotated.html", "annotated_dup" ],
@@ -62,14 +64,14 @@ var NAVTREEINDEX =
 "config_2sdkconfig_8h.html#a436560c7a8448f3d059bda3865fc85ae",
 "config_2sdkconfig_8h.html#a88bc736b0ed257390f24bb90f6b82181",
 "config_2sdkconfig_8h.html#aca5ab966c87c9775ea0a63108c990987",
-"dir_f04538e8b60fd58960b73759c769d4c4.html",
-"group___b_l_e.html#gga5f72a05c6c7165f5270a63ffba14035bad86cf5872495b6ce57ce67dc4cf0d92b",
-"group___drivers___devices.html#ga6f16f71a0f63a246364ac964488ac9eb",
-"group___m_p_u6050.html#ga0702c4c16f0c07bd2e3137181723c356",
-"group___m_p_u6050.html#ga77e346aef05647d9d492077e0297d67b",
-"group___m_p_u6050.html#gaedcf3d8fb788339ce1a148b5163f90a3",
-"ili9341_8c.html#aa3d2f2e1764e68edcf0585da630a8739",
-"structesp__hidd__cb__param__t_1_1hidd__vendor__write__evt__param.html#a71a8a39270ae1bf01ad381dca0e95c1b"
+"dir_bec49aa929b2333ea781d88dd96170b0.html",
+"group___b_l_e.html#ggab13ed63d3b157b93f1e6d98e3d6a7b47abe3828521b028796e567225bfbc5a978",
+"group___drivers___devices.html#gab948b825f1a8bb789ffc918a9d56a0a9",
+"group___m_p_u6050.html#ga0965e7a94f1f5727d4b052569fb78934",
+"group___m_p_u6050.html#ga79d0410aaf581d03bf1d58056f225563",
+"group___m_p_u6050.html#gaeff20085db1bc690e806c72f5db10f47",
+"ili9341_8c.html#ab5379db10c252da57952bf8ce5eb7d0e",
+"structdht11__reading.html#a405f237eaa8a513a9682fbb6e44c4860"
 ];
 
 var SYNCONMSG = 'click en deshabilitar sincronización';

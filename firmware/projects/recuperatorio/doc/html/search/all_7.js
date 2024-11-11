@@ -7,7 +7,7 @@ var searchData=
   ['gatts_5fcb_4',['gatts_cb',['../structgatts__profile__inst.html#a28b75011466d4c802e22649234b71cad',1,'gatts_profile_inst']]],
   ['gatts_5fif_5',['gatts_if',['../structesp__hidd__cb__param__t_1_1hidd__init__finish__evt__param.html#a2b8cfa6eddafd0638ba9804268233d5f',1,'esp_hidd_cb_param_t::hidd_init_finish_evt_param::gatts_if()'],['../structgatts__profile__inst.html#a64b71c3b06d5f84b1a010f794f64b8c1',1,'gatts_profile_inst::gatts_if()']]],
   ['gatts_5fprofile_5finst_6',['gatts_profile_inst',['../structgatts__profile__inst.html',1,'']]],
-  ['general_7',['general',['../projects_2examen_2build_2_c_make_cache_8txt.html#ad797829e3284fd15f2780269ce9bb6dc',1,'CMakeCache.txt']]],
+  ['general_7',['general',['../projects_2recuperatorio_2build_2_c_make_cache_8txt.html#ad797829e3284fd15f2780269ce9bb6dc',1,'CMakeCache.txt']]],
   ['giop_5ffast_8',['GIOP_FAST',['../group___g_i_o_p___f_a_s_t.html',1,'']]],
   ['gninja_9',['GNinja',['../bootloader-cfgcmd_8txt.html#a941746e888278bacf6d655247ce28743',1,'bootloader-cfgcmd.txt']]],
   ['gpio_10',['GPIO',['../group___g_i_o_p.html',1,'']]],

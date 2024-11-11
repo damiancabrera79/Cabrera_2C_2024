@@ -30,7 +30,7 @@ var searchData=
   ['frame_5fctrl_27',['frame_ctrl',['../ili9341_8c.html#aa3d2f2e1764e68edcf0585da630a8739',1,'ili9341.c']]],
   ['frame_5fctrl_28',['FRAME_CTRL',['../ili9341_8c.html#a7f2398c30b4b925af593fae3bb4168d0',1,'ili9341.c']]],
   ['func_5fp_29',['func_p',['../structserial__config__t.html#a672985730d2c0cf9105559adc9759a3a',1,'serial_config_t::func_p()'],['../structtimer__config__t.html#a672985730d2c0cf9105559adc9759a3a',1,'timer_config_t::func_p()'],['../structspi__mcu__config__t.html#a672985730d2c0cf9105559adc9759a3a',1,'spi_mcu_config_t::func_p()'],['../structble__config__t.html#a331819affab0b6948eb77bb32a9c8a63',1,'ble_config_t::func_p()'],['../structanalog__input__config__t.html#a672985730d2c0cf9105559adc9759a3a',1,'analog_input_config_t::func_p()']]],
-  ['funciontimera_30',['funcionTimerA',['../examen_8c.html#a49740631bf6d49da7973c3dde5cf3dd1',1,'examen.c']]],
-  ['funciontimerb_31',['funcionTimerB',['../examen_8c.html#a448a5defd3cc1cb488525cc2bc9e9658',1,'examen.c']]],
-  ['funcionuart_32',['funcionUART',['../examen_8c.html#aa524beeb8a91ae408c7195f14a0e8e83',1,'examen.c']]]
+  ['funciontimera_30',['funcionTimerA',['../recuperatorio_8c.html#a49740631bf6d49da7973c3dde5cf3dd1',1,'recuperatorio.c']]],
+  ['funciontimerb_31',['funcionTimerB',['../recuperatorio_8c.html#a448a5defd3cc1cb488525cc2bc9e9658',1,'recuperatorio.c']]],
+  ['funcionuart_32',['FuncionUART',['../recuperatorio_8c.html#a0854a3b0a6bf9637ee6da9637bcae64c',1,'recuperatorio.c']]]
 ];

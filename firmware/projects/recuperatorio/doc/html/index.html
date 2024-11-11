@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Alerta para ciclistas: Alerta para ciclistas</title>
+<title>Recuperatorio 11-11-2024 - Sistema de pesaje de camiones basado en la placa ESP-EDU: Sistema de pesaje de camiones basado en la placa ESP-EDU</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,9 +31,9 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Alerta para ciclistas<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">Recuperatorio 11-11-2024 - Sistema de pesaje de camiones basado en la placa ESP-EDU<span id="projectnumber">&#160;1.0</span>
    </div>
-   <div id="projectbrief">Dispositivo basado en la ESP-EDU que permita detectar eventos peligrosos para ciclista</div>
+   <div id="projectbrief">Sistema de pesaje de camiones basado en la placa ESP-EDU que verifica la velocidad de ingreso de los vehículos y pesa el vehículo cuando se detiene. El sistema utiliza un sensor de distancia HC-SR04 para medir la velocidad y dos galgas para medir el peso. Los LEDs de la ESP-EDU se utilizan como señales de advertencia de velocidad. El sistema envía el peso y la velocidad máxima del vehículo a la PC del operario a través de la UART y permite controlar la apertura y cierre de una barrera mediante comandos enviados desde la PC</div>
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -93,12 +93,12 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Alerta para ciclistas </div></div>
+  <div class="headertitle"><div class="title">Sistema de pesaje de camiones basado en la placa ESP-EDU </div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><h1><a class="anchor" id="genDesc"></a>
 General Description</h1>
-<p >Dispositivo de alerta para ciclistas basado en la ESP-EDU que detecta eventos peligrosos mediante un acelerómetro analógico en el casco y un sensor de ultrasonido en la parte trasera de la bicicleta. El dispositivo alerta al ciclista sobre la presencia de vehículos detrás de él mediante LEDs y una alarma sonora, y envía notificaciones a un smartphone a través de Bluetooth en caso de precaución o peligro. Además, detecta golpes o caídas mediante el acelerómetro y envía una notificación en caso de que la sumatoria de la aceleración supere los 4G.</p>
+<p >Sistema de pesaje de camiones basado en la placa ESP-EDU que verifica la velocidad de ingreso de los vehículos y pesa el vehículo cuando se detiene. El sistema utiliza un sensor de distancia HC-SR04 para medir la velocidad y dos galgas para medir el peso. Los LEDs de la ESP-EDU se utilizan como señales de advertencia de velocidad. El sistema envía el peso y la velocidad máxima del vehículo a la PC del operario a través de la UART y permite controlar la apertura y cierre de una barrera mediante comandos enviados desde la PC.</p>
 <h1><a class="anchor" id="hardConn"></a>
 Hardware Connection</h1>
 <table class="markdownTable">
@@ -119,26 +119,24 @@ Hardware Connection</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyCenter">GND   </td><td class="markdownTableBodyLeft">GND    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyCenter">GPIO_10   </td><td class="markdownTableBodyLeft">OUTPUT   </td></tr>
+<td class="markdownTableBodyCenter">UART_PC   </td><td class="markdownTableBodyLeft">INPUT/OUTPUT   </td></tr>
 </table>
 <table class="markdownTable">
 <tr class="markdownTableHead">
-<th class="markdownTableHeadCenter">ESP32c6   </th><th class="markdownTableHeadLeft">BUZZER    </th></tr>
+<th class="markdownTableHeadCenter">ESP32c6   </th><th class="markdownTableHeadLeft">BARRERA    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyCenter">GPIO_22   </td><td class="markdownTableBodyLeft">OUTPUT    </td></tr>
+<td class="markdownTableBodyCenter">GPIO_18   </td><td class="markdownTableBodyLeft">OUTPUT    </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyCenter">GND   </td><td class="markdownTableBodyLeft">GND   </td></tr>
 </table>
 <table class="markdownTable">
 <tr class="markdownTableHead">
-<th class="markdownTableHeadCenter">SP32c6   </th><th class="markdownTableHeadLeft">ACELEROMETRO    </th></tr>
+<th class="markdownTableHeadCenter">SP32c6   </th><th class="markdownTableHeadLeft">GALGAS    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyCenter">CH1   </td><td class="markdownTableBodyLeft">C. A/D en X    </td></tr>
+<td class="markdownTableBodyCenter">CH1   </td><td class="markdownTableBodyLeft">C. A/D    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyCenter">CH2   </td><td class="markdownTableBodyLeft">C. A/D en Y    </td></tr>
+<td class="markdownTableBodyCenter">CH2   </td><td class="markdownTableBodyLeft">C. A/D    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyCenter">CH3   </td><td class="markdownTableBodyLeft">C. A/D en Z    </td></tr>
-<tr class="markdownTableRowEven">
 <td class="markdownTableBodyCenter">GND   </td><td class="markdownTableBodyLeft">GND   </td></tr>
 </table>
 <h1><a class="anchor" id="changelog"></a>
@@ -147,7 +145,7 @@ Changelog</h1>
 <tr class="markdownTableHead">
 <th class="markdownTableHeadCenter">Date   </th><th class="markdownTableHeadLeft">Description    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyCenter">04/11/2024   </td><td class="markdownTableBodyLeft">Document creation   </td></tr>
+<td class="markdownTableBodyCenter">11/11/2024   </td><td class="markdownTableBodyLeft">Document creation   </td></tr>
 </table>
 <dl class="section author"><dt>Autor</dt><dd>Damian Cabrera (<a href="#" onclick="location.href='mai'+'lto:'+'cab'+'re'+'rad'+'am'+'ian'+'@g'+'mai'+'l.'+'com'; return false;">cabre<span class="obfuscator">.nosp@m.</span>rada<span class="obfuscator">.nosp@m.</span>mian@<span class="obfuscator">.nosp@m.</span>gmai<span class="obfuscator">.nosp@m.</span>l.com</a>) </dd></dl>
 </div></div><!-- PageDoc -->

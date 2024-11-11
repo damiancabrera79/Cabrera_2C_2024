@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Alerta para ciclistas: Referencia del Archivo C:/Repositorios/Cabrera_2C_2024/firmware/drivers/devices/src/hc_sr04.c</title>
+<title>Recuperatorio 11-11-2024 - Sistema de pesaje de camiones basado en la placa ESP-EDU: Referencia del Archivo C:/Repositorios/Cabrera_2C_2024/firmware/drivers/devices/src/hc_sr04.c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,9 +31,9 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Alerta para ciclistas<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">Recuperatorio 11-11-2024 - Sistema de pesaje de camiones basado en la placa ESP-EDU<span id="projectnumber">&#160;1.0</span>
    </div>
-   <div id="projectbrief">Dispositivo basado en la ESP-EDU que permita detectar eventos peligrosos para ciclista</div>
+   <div id="projectbrief">Sistema de pesaje de camiones basado en la placa ESP-EDU que verifica la velocidad de ingreso de los vehículos y pesa el vehículo cuando se detiene. El sistema utiliza un sensor de distancia HC-SR04 para medir la velocidad y dos galgas para medir el peso. Los LEDs de la ESP-EDU se utilizan como señales de advertencia de velocidad. El sistema envía el peso y la velocidad máxima del vehículo a la PC del operario a través de la UART y permite controlar la apertura y cierre de una barrera mediante comandos enviados desde la PC</div>
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -106,11 +106,11 @@ $(document).ready(function(){initNavTree('hc__sr04_8c.html',''); initResizable()
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 defines</h2></td></tr>
-<tr class="memitem:aa6532a029eb01783785bf19751d1252d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hc__sr04_8c.html#aa6532a029eb01783785bf19751d1252d">MAX_US</a>&#160;&#160;&#160;17700	/* maximun distance time in us (300cm or 118inch) */</td></tr>
+<tr class="memitem:aa6532a029eb01783785bf19751d1252d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hc__sr04_8c.html#aa6532a029eb01783785bf19751d1252d">MAX_US</a>&#160;&#160;&#160;17700	/* maximun <a class="el" href="recuperatorio_8c.html#a3139244bfb778557108cda2114f91f3f">distance</a> time in us (300cm or 118inch) */</td></tr>
 <tr class="separator:aa6532a029eb01783785bf19751d1252d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a297495b035c5319be312b8ff323a34ba"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hc__sr04_8c.html#a297495b035c5319be312b8ff323a34ba">MAX_CM</a>&#160;&#160;&#160;300		/* maximun distance time in cm */</td></tr>
+<tr class="memitem:a297495b035c5319be312b8ff323a34ba"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hc__sr04_8c.html#a297495b035c5319be312b8ff323a34ba">MAX_CM</a>&#160;&#160;&#160;300		/* maximun <a class="el" href="recuperatorio_8c.html#a3139244bfb778557108cda2114f91f3f">distance</a> time in cm */</td></tr>
 <tr class="separator:a297495b035c5319be312b8ff323a34ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05ecf89678042f348a45957db338d788"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hc__sr04_8c.html#a05ecf89678042f348a45957db338d788">MAX_INCH</a>&#160;&#160;&#160;118		/* maximun distance time in inch */</td></tr>
+<tr class="memitem:a05ecf89678042f348a45957db338d788"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hc__sr04_8c.html#a05ecf89678042f348a45957db338d788">MAX_INCH</a>&#160;&#160;&#160;118		/* maximun <a class="el" href="recuperatorio_8c.html#a3139244bfb778557108cda2114f91f3f">distance</a> time in inch */</td></tr>
 <tr class="separator:a05ecf89678042f348a45957db338d788"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e52844206c91ee47dcdf1697595b43a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hc__sr04_8c.html#a5e52844206c91ee47dcdf1697595b43a">US2CM</a>&#160;&#160;&#160;59		/* scale factor to conver pulse width to cm */</td></tr>
 <tr class="separator:a5e52844206c91ee47dcdf1697595b43a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -149,7 +149,7 @@ Funciones</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define MAX_CM&#160;&#160;&#160;300		/* maximun distance time in cm */</td>
+          <td class="memname">#define MAX_CM&#160;&#160;&#160;300		/* maximun <a class="el" href="recuperatorio_8c.html#a3139244bfb778557108cda2114f91f3f">distance</a> time in cm */</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -165,7 +165,7 @@ Funciones</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define MAX_INCH&#160;&#160;&#160;118		/* maximun distance time in inch */</td>
+          <td class="memname">#define MAX_INCH&#160;&#160;&#160;118		/* maximun <a class="el" href="recuperatorio_8c.html#a3139244bfb778557108cda2114f91f3f">distance</a> time in inch */</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -181,7 +181,7 @@ Funciones</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define MAX_US&#160;&#160;&#160;17700	/* maximun distance time in us (300cm or 118inch) */</td>
+          <td class="memname">#define MAX_US&#160;&#160;&#160;17700	/* maximun <a class="el" href="recuperatorio_8c.html#a3139244bfb778557108cda2114f91f3f">distance</a> time in us (300cm or 118inch) */</td>
         </tr>
       </table>
 </div><div class="memdoc">

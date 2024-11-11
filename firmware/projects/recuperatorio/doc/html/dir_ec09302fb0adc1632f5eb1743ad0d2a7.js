@@ -2,6 +2,7 @@ var dir_ec09302fb0adc1632f5eb1743ad0d2a7 =
 [
     [ "buzzer.h", "buzzer_8h.html", "buzzer_8h" ],
     [ "buzzer_melodies.h", "buzzer__melodies_8h.html", "buzzer__melodies_8h" ],
+    [ "dht11.h", "devices_2inc_2dht11_8h.html", "devices_2inc_2dht11_8h" ],
     [ "fonts.h", "fonts_8h.html", "fonts_8h" ],
     [ "hc_sr04.h", "hc__sr04_8h.html", "hc__sr04_8h" ],
     [ "hx711.h", "hx711_8h.html", "hx711_8h" ],

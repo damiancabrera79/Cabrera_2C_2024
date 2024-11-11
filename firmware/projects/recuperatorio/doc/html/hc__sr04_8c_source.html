@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Alerta para ciclistas: Fichero Fuente C:/Repositorios/Cabrera_2C_2024/firmware/drivers/devices/src/hc_sr04.c</title>
+<title>Recuperatorio 11-11-2024 - Sistema de pesaje de camiones basado en la placa ESP-EDU: Fichero Fuente C:/Repositorios/Cabrera_2C_2024/firmware/drivers/devices/src/hc_sr04.c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,9 +31,9 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Alerta para ciclistas<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">Recuperatorio 11-11-2024 - Sistema de pesaje de camiones basado en la placa ESP-EDU<span id="projectnumber">&#160;1.0</span>
    </div>
-   <div id="projectbrief">Dispositivo basado en la ESP-EDU que permita detectar eventos peligrosos para ciclista</div>
+   <div id="projectbrief">Sistema de pesaje de camiones basado en la placa ESP-EDU que verifica la velocidad de ingreso de los vehículos y pesa el vehículo cuando se detiene. El sistema utiliza un sensor de distancia HC-SR04 para medir la velocidad y dos galgas para medir el peso. Los LEDs de la ESP-EDU se utilizan como señales de advertencia de velocidad. El sistema envía el peso y la velocidad máxima del vehículo a la PC del operario a través de la UART y permite controlar la apertura y cierre de una barrera mediante comandos enviados desde la PC</div>
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -130,7 +130,7 @@ $(document).ready(function(){initNavTree('hc__sr04_8c_source.html',''); initResi
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>}</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="group___h_c___s_r04.html#ga73a5aaa2183e55d104d4e0c2c435e251">   45</a></span>uint16_t <a class="code hl_function" href="group___h_c___s_r04.html#ga73a5aaa2183e55d104d4e0c2c435e251">HcSr04ReadDistanceInCentimeters</a>(<span class="keywordtype">void</span>){</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    uint16_t distance = 0, waiting = 0;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    uint16_t <a class="code hl_variable" href="recuperatorio_8c.html#a3139244bfb778557108cda2114f91f3f">distance</a> = 0, waiting = 0;</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <a class="code hl_function" href="group___g_i_o_p.html#gaba62250f2b0e73a98b6f35fb6078fdb1">GPIOOn</a>(trigger_st);</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <a class="code hl_function" href="group___delay.html#ga92e1b2564bacd20071bcd06b697f52f8">DelayUs</a>(10);</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <a class="code hl_function" href="group___g_i_o_p.html#ga30ed9d97406129b9b6390154a7479d70">GPIOOff</a>(trigger_st);</div>
@@ -143,16 +143,16 @@ $(document).ready(function(){initNavTree('hc__sr04_8c_source.html',''); initResi
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    }</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordflow">do</span>{</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <a class="code hl_function" href="group___delay.html#ga92e1b2564bacd20071bcd06b697f52f8">DelayUs</a>(10);</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        distance += 10;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keywordflow">if</span>(distance &gt; <a class="code hl_define" href="hc__sr04_8c.html#aa6532a029eb01783785bf19751d1252d">MAX_US</a>)</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <a class="code hl_variable" href="recuperatorio_8c.html#a3139244bfb778557108cda2114f91f3f">distance</a> += 10;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="recuperatorio_8c.html#a3139244bfb778557108cda2114f91f3f">distance</a> &gt; <a class="code hl_define" href="hc__sr04_8c.html#aa6532a029eb01783785bf19751d1252d">MAX_US</a>)</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            <span class="keywordflow">return</span> <a class="code hl_define" href="hc__sr04_8c.html#a297495b035c5319be312b8ff323a34ba">MAX_CM</a>;</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    }</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordflow">while</span>(<a class="code hl_function" href="group___g_i_o_p.html#gab42a477acc6064150000fb4a1bd4305c">GPIORead</a>(echo_st));</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordflow">return</span> (distance/<a class="code hl_define" href="hc__sr04_8c.html#a5e52844206c91ee47dcdf1697595b43a">US2CM</a>);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordflow">return</span> (<a class="code hl_variable" href="recuperatorio_8c.html#a3139244bfb778557108cda2114f91f3f">distance</a>/<a class="code hl_define" href="hc__sr04_8c.html#a5e52844206c91ee47dcdf1697595b43a">US2CM</a>);</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>}</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="group___h_c___s_r04.html#gad819b1b0326d1edca15ec7d153aa5700">   67</a></span>uint16_t <a class="code hl_function" href="group___h_c___s_r04.html#gad819b1b0326d1edca15ec7d153aa5700">HcSr04ReadDistanceInInches</a>(<span class="keywordtype">void</span>){</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    uint16_t distance = 0, waiting = 0;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    uint16_t <a class="code hl_variable" href="recuperatorio_8c.html#a3139244bfb778557108cda2114f91f3f">distance</a> = 0, waiting = 0;</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <a class="code hl_function" href="group___g_i_o_p.html#gaba62250f2b0e73a98b6f35fb6078fdb1">GPIOOn</a>(trigger_st);</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <a class="code hl_function" href="group___delay.html#ga92e1b2564bacd20071bcd06b697f52f8">DelayUs</a>(10);</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <a class="code hl_function" href="group___g_i_o_p.html#ga30ed9d97406129b9b6390154a7479d70">GPIOOff</a>(trigger_st);</div>
@@ -165,12 +165,12 @@ $(document).ready(function(){initNavTree('hc__sr04_8c_source.html',''); initResi
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    }</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordflow">do</span>{</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <a class="code hl_function" href="group___delay.html#ga92e1b2564bacd20071bcd06b697f52f8">DelayUs</a>(10);</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        distance += 10;</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keywordflow">if</span>(distance &gt; <a class="code hl_define" href="hc__sr04_8c.html#aa6532a029eb01783785bf19751d1252d">MAX_US</a>)</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <a class="code hl_variable" href="recuperatorio_8c.html#a3139244bfb778557108cda2114f91f3f">distance</a> += 10;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="recuperatorio_8c.html#a3139244bfb778557108cda2114f91f3f">distance</a> &gt; <a class="code hl_define" href="hc__sr04_8c.html#aa6532a029eb01783785bf19751d1252d">MAX_US</a>)</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            <span class="keywordflow">return</span> <a class="code hl_define" href="hc__sr04_8c.html#a05ecf89678042f348a45957db338d788">MAX_INCH</a>;</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    }</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordflow">while</span>(<a class="code hl_function" href="group___g_i_o_p.html#gab42a477acc6064150000fb4a1bd4305c">GPIORead</a>(echo_st));</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordflow">return</span> (distance/<a class="code hl_define" href="hc__sr04_8c.html#a34f3975d94758e78ddea4f3bcac2398b">US2INCH</a>);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordflow">return</span> (<a class="code hl_variable" href="recuperatorio_8c.html#a3139244bfb778557108cda2114f91f3f">distance</a>/<a class="code hl_define" href="hc__sr04_8c.html#a34f3975d94758e78ddea4f3bcac2398b">US2INCH</a>);</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>}</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="group___h_c___s_r04.html#ga549ba28c76f1282cfd92f57f3bca3ff0">   89</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="group___h_c___s_r04.html#ga549ba28c76f1282cfd92f57f3bca3ff0">HcSr04Deinit</a>(<span class="keywordtype">void</span>){</div>
@@ -200,6 +200,7 @@ $(document).ready(function(){initNavTree('hc__sr04_8c_source.html',''); initResi
 <div class="ttc" id="ahc__sr04_8c_html_a5e52844206c91ee47dcdf1697595b43a"><div class="ttname"><a href="hc__sr04_8c.html#a5e52844206c91ee47dcdf1697595b43a">US2CM</a></div><div class="ttdeci">#define US2CM</div><div class="ttdef"><b>Definition:</b> <a href="hc__sr04_8c_source.html#l00019">hc_sr04.c:19</a></div></div>
 <div class="ttc" id="ahc__sr04_8c_html_aa6532a029eb01783785bf19751d1252d"><div class="ttname"><a href="hc__sr04_8c.html#aa6532a029eb01783785bf19751d1252d">MAX_US</a></div><div class="ttdeci">#define MAX_US</div><div class="ttdef"><b>Definition:</b> <a href="hc__sr04_8c_source.html#l00016">hc_sr04.c:16</a></div></div>
 <div class="ttc" id="ahc__sr04_8h_html"><div class="ttname"><a href="hc__sr04_8h.html">hc_sr04.h</a></div></div>
+<div class="ttc" id="arecuperatorio_8c_html_a3139244bfb778557108cda2114f91f3f"><div class="ttname"><a href="recuperatorio_8c.html#a3139244bfb778557108cda2114f91f3f">distance</a></div><div class="ttdeci">uint16_t distance</div><div class="ttdoc">Variable uint16_t que almacena el valor de la distancia medida por el sensor HC-SR04.</div><div class="ttdef"><b>Definition:</b> <a href="recuperatorio_8c_source.html#l00076">recuperatorio.c:76</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Alerta para ciclistas: UART</title>
+<title>Recuperatorio 11-11-2024 - Sistema de pesaje de camiones basado en la placa ESP-EDU: UART</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,9 +31,9 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Alerta para ciclistas<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">Recuperatorio 11-11-2024 - Sistema de pesaje de camiones basado en la placa ESP-EDU<span id="projectnumber">&#160;1.0</span>
    </div>
-   <div id="projectbrief">Dispositivo basado en la ESP-EDU que permita detectar eventos peligrosos para ciclista</div>
+   <div id="projectbrief">Sistema de pesaje de camiones basado en la placa ESP-EDU que verifica la velocidad de ingreso de los vehículos y pesa el vehículo cuando se detiene. El sistema utiliza un sensor de distancia HC-SR04 para medir la velocidad y dos galgas para medir el peso. Los LEDs de la ESP-EDU se utilizan como señales de advertencia de velocidad. El sistema envía el peso y la velocidad máxima del vehículo a la PC del operario a través de la UART y permite controlar la apertura y cierre de una barrera mediante comandos enviados desde la PC</div>
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -254,6 +254,8 @@ Changelog</h1>
 
 <p class="reference">Hace referencia a <a class="el" href="uart__mcu_8h_source.html#l00040">serial_config_t::baud_rate</a>, <a class="el" href="uart__mcu_8h_source.html#l00041">serial_config_t::func_p</a>, <a class="el" href="uart__mcu_8h_source.html#l00039">serial_config_t::port</a>, <a class="el" href="uart__mcu_8h_source.html#l00026">UART_NO_INT</a>, <a class="el" href="uart__mcu_8h_source.html#l00032">UART_PC</a> y <a class="el" href="uart__mcu_8c_source.html#l00027">uart_pc_isr_p</a>.</p>
 
+<p class="reference">Referenciado por <a class="el" href="recuperatorio_8c_source.html#l00282">app_main()</a>.</p>
+
 </div>
 </div>
 <a id="ga00c7e785d2874c52bab6e4dba88a5e23" name="ga00c7e785d2874c52bab6e4dba88a5e23"></a>
@@ -384,6 +386,8 @@ Changelog</h1>
 <p class="definition">Definición en la línea <a class="el" href="uart__mcu_8c_source.html#l00142">142</a> del archivo <a class="el" href="uart__mcu_8c_source.html">uart_mcu.c</a>.</p>
 
 <p class="reference">Hace referencia a <a class="el" href="uart__mcu_8c_source.html#l00025">READ_TIMEOUT</a>, <a class="el" href="uart__mcu_8h_source.html#l00033">UART_CONNECTOR</a> y <a class="el" href="uart__mcu_8h_source.html#l00032">UART_PC</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="recuperatorio_8c_source.html#l00264">FuncionUART()</a>.</p>
 
 </div>
 </div>

@@ -1,0 +1,474 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Recuperatorio 11-11-2024 - Sistema de pesaje de camiones basado en la placa ESP-EDU: Referencia del Archivo C:/Repositorios/Cabrera_2C_2024/firmware/projects/recuperatorio/main/recuperatorio.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Recuperatorio 11-11-2024 - Sistema de pesaje de camiones basado en la placa ESP-EDU<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Sistema de pesaje de camiones basado en la placa ESP-EDU que verifica la velocidad de ingreso de los vehículos y pesa el vehículo cuando se detiene. El sistema utiliza un sensor de distancia HC-SR04 para medir la velocidad y dos galgas para medir el peso. Los LEDs de la ESP-EDU se utilizan como señales de advertencia de velocidad. El sistema envía el peso y la velocidad máxima del vehículo a la PC del operario a través de la UART y permite controlar la apertura y cierre de una barrera mediante comandos enviados desde la PC</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('recuperatorio_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Estructuras de datos</a> &#124;
+<a href="#define-members">defines</a> &#124;
+<a href="#func-members">Funciones</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">Referencia del Archivo recuperatorio.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &quot;freertos/FreeRTOS.h&quot;</code><br />
+<code>#include &quot;freertos/task.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="analog__io__mcu_8h_source.html">analog_io_mcu.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="uart__mcu_8h_source.html">uart_mcu.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="timer__mcu_8h_source.html">timer_mcu.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="gpio__mcu_8h_source.html">gpio_mcu.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="hc__sr04_8h_source.html">hc_sr04.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="led_8h_source.html">led.h</a>&quot;</code><br />
+<code>#include &quot;ctype.h&quot;</code><br />
+</div>
+<p><a href="recuperatorio_8c_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Estructuras de datos</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpio_config__t.html">gpioConfig_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estructura utilizada para configurar los pines GPIO.  <a href="structgpio_config__t.html#details">Más...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:a5320277bc88fd125e265cf67252c3b78"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="recuperatorio_8c.html#a5320277bc88fd125e265cf67252c3b78">CONFIG_PERIOD_100_mSEG</a>&#160;&#160;&#160;100000</td></tr>
+<tr class="separator:a5320277bc88fd125e265cf67252c3b78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38f7139b30a8f883fb2f870543e9f98f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="recuperatorio_8c.html#a38f7139b30a8f883fb2f870543e9f98f">CONFIG_PERIOD_5_mSEG</a>&#160;&#160;&#160;5000</td></tr>
+<tr class="separator:a38f7139b30a8f883fb2f870543e9f98f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a49740631bf6d49da7973c3dde5cf3dd1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="recuperatorio_8c.html#a49740631bf6d49da7973c3dde5cf3dd1">funcionTimerA</a> (void *param)</td></tr>
+<tr class="separator:a49740631bf6d49da7973c3dde5cf3dd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a448a5defd3cc1cb488525cc2bc9e9658"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="recuperatorio_8c.html#a448a5defd3cc1cb488525cc2bc9e9658">funcionTimerB</a> (void *param)</td></tr>
+<tr class="separator:a448a5defd3cc1cb488525cc2bc9e9658"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50ec905c4c758da24a08903af45b6e9b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="recuperatorio_8c.html#a50ec905c4c758da24a08903af45b6e9b">inicializarGPIO</a> (<a class="el" href="structgpio_config__t.html">gpioConfig_t</a> *vectorGpio, int cantidad)</td></tr>
+<tr class="memdesc:a50ec905c4c758da24a08903af45b6e9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicializa los pines y la dirección en los que van a trabajar (input o output)  <a href="recuperatorio_8c.html#a50ec905c4c758da24a08903af45b6e9b">Más...</a><br /></td></tr>
+<tr class="separator:a50ec905c4c758da24a08903af45b6e9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0854a3b0a6bf9637ee6da9637bcae64c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="recuperatorio_8c.html#a0854a3b0a6bf9637ee6da9637bcae64c">FuncionUART</a> (void *param)</td></tr>
+<tr class="memdesc:a0854a3b0a6bf9637ee6da9637bcae64c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuración de la UART.  <a href="recuperatorio_8c.html#a0854a3b0a6bf9637ee6da9637bcae64c">Más...</a><br /></td></tr>
+<tr class="separator:a0854a3b0a6bf9637ee6da9637bcae64c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a630544a7f0a2cc40d8a7fefab7e2fe70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="recuperatorio_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70">app_main</a> (void)</td></tr>
+<tr class="separator:a630544a7f0a2cc40d8a7fefab7e2fe70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a3139244bfb778557108cda2114f91f3f"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="recuperatorio_8c.html#a3139244bfb778557108cda2114f91f3f">distance</a></td></tr>
+<tr class="memdesc:a3139244bfb778557108cda2114f91f3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variable uint16_t que almacena el valor de la distancia medida por el sensor HC-SR04.  <a href="recuperatorio_8c.html#a3139244bfb778557108cda2114f91f3f">Más...</a><br /></td></tr>
+<tr class="separator:a3139244bfb778557108cda2114f91f3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86499db61c7fb22b7edc398554cbc9d9"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="recuperatorio_8c.html#a86499db61c7fb22b7edc398554cbc9d9">distance_samples</a> [10]</td></tr>
+<tr class="memdesc:a86499db61c7fb22b7edc398554cbc9d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variable uint16_t que almacena el valor de la distancia medida por el sensor HC-SR04.  <a href="recuperatorio_8c.html#a86499db61c7fb22b7edc398554cbc9d9">Más...</a><br /></td></tr>
+<tr class="separator:a86499db61c7fb22b7edc398554cbc9d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc18296609ce2f5a540c32bc8e643174"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="recuperatorio_8c.html#acc18296609ce2f5a540c32bc8e643174">peso1</a> [50]</td></tr>
+<tr class="memdesc:acc18296609ce2f5a540c32bc8e643174"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variable uint16_t que almacena el valor del peso galga 1.  <a href="recuperatorio_8c.html#acc18296609ce2f5a540c32bc8e643174">Más...</a><br /></td></tr>
+<tr class="separator:acc18296609ce2f5a540c32bc8e643174"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61eb6267c2f8fb3c23f3bd97031f9fca"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="recuperatorio_8c.html#a61eb6267c2f8fb3c23f3bd97031f9fca">peso2</a> [50]</td></tr>
+<tr class="memdesc:a61eb6267c2f8fb3c23f3bd97031f9fca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variable uint16_t que almacena el valor del peso galga 2.  <a href="recuperatorio_8c.html#a61eb6267c2f8fb3c23f3bd97031f9fca">Más...</a><br /></td></tr>
+<tr class="separator:a61eb6267c2f8fb3c23f3bd97031f9fca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cf7130fcc848cf6d96666653d364d42"><td class="memItemLeft" align="right" valign="top">TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="recuperatorio_8c.html#a6cf7130fcc848cf6d96666653d364d42">sensar_distancia_task_handle</a> = <a class="el" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td></tr>
+<tr class="separator:a6cf7130fcc848cf6d96666653d364d42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9557f02952bb7b3a98e9699c77b3055"><td class="memItemLeft" align="right" valign="top">TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="recuperatorio_8c.html#ae9557f02952bb7b3a98e9699c77b3055">medir_peso_task_handle</a> = <a class="el" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td></tr>
+<tr class="memdesc:ae9557f02952bb7b3a98e9699c77b3055"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identificador de tarea que se encarga de medir el peso del camion.  <a href="recuperatorio_8c.html#ae9557f02952bb7b3a98e9699c77b3055">Más...</a><br /></td></tr>
+<tr class="separator:ae9557f02952bb7b3a98e9699c77b3055"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentación de los 'defines'</h2>
+<a id="a5320277bc88fd125e265cf67252c3b78" name="a5320277bc88fd125e265cf67252c3b78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5320277bc88fd125e265cf67252c3b78">&#9670;&nbsp;</a></span>CONFIG_PERIOD_100_mSEG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONFIG_PERIOD_100_mSEG&#160;&#160;&#160;100000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="recuperatorio_8c_source.html#l00069">69</a> del archivo <a class="el" href="recuperatorio_8c_source.html">recuperatorio.c</a>.</p>
+
+</div>
+</div>
+<a id="a38f7139b30a8f883fb2f870543e9f98f" name="a38f7139b30a8f883fb2f870543e9f98f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38f7139b30a8f883fb2f870543e9f98f">&#9670;&nbsp;</a></span>CONFIG_PERIOD_5_mSEG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONFIG_PERIOD_5_mSEG&#160;&#160;&#160;5000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="recuperatorio_8c_source.html#l00070">70</a> del archivo <a class="el" href="recuperatorio_8c_source.html">recuperatorio.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las funciones</h2>
+<a id="a630544a7f0a2cc40d8a7fefab7e2fe70" name="a630544a7f0a2cc40d8a7fefab7e2fe70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a630544a7f0a2cc40d8a7fefab7e2fe70">&#9670;&nbsp;</a></span>app_main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void app_main </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Inicializa los GPIOs indicados con sus respectivas configuraciones.</p>
+<p >Galga 1: CH1 | Galga 2: CH2</p>
+<p >Configuración de la UART para comunicación en serie.</p>
+<p >Configuración e inicialización del timer A con un periodo de 3 segundos.</p>
+<p >Creación de tareas en FreeRTOS.</p>
+<p >Inicia los timers A y B.</p>
+
+<p class="definition">Definición en la línea <a class="el" href="recuperatorio_8c_source.html#l00282">282</a> del archivo <a class="el" href="recuperatorio_8c_source.html">recuperatorio.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="analog__io__mcu_8h_source.html#l00038">ADC_SINGLE</a>, <a class="el" href="analog__io__mcu_8c_source.html#l00045">AnalogInputInit()</a>, <a class="el" href="analog__io__mcu_8h_source.html#l00032">CH1</a>, <a class="el" href="analog__io__mcu_8h_source.html#l00033">CH2</a>, <a class="el" href="recuperatorio_8c_source.html#l00069">CONFIG_PERIOD_100_mSEG</a>, <a class="el" href="recuperatorio_8c_source.html#l00070">CONFIG_PERIOD_5_mSEG</a>, <a class="el" href="recuperatorio_8c_source.html#l00126">funcionTimerA()</a>, <a class="el" href="recuperatorio_8c_source.html#l00137">funcionTimerB()</a>, <a class="el" href="recuperatorio_8c_source.html#l00264">FuncionUART()</a>, <a class="el" href="gpio__mcu_8h_source.html#l00070">GPIO_18</a>, <a class="el" href="gpio__mcu_8h_source.html#l00054">GPIO_2</a>, <a class="el" href="gpio__mcu_8h_source.html#l00055">GPIO_3</a>, <a class="el" href="gpio__mcu_8h_source.html#l00044">GPIO_OUTPUT</a>, <a class="el" href="hc__sr04_8c_source.html#l00034">HcSr04Init()</a>, <a class="el" href="recuperatorio_8c_source.html#l00251">inicializarGPIO()</a>, <a class="el" href="analog__io__mcu_8h_source.html#l00049">analog_input_config_t::input</a>, <a class="el" href="led_8c_source.html#l00031">LedsInit()</a>, <a class="el" href="ili9341_8c_source.html#l00019">NULL</a>, <a class="el" href="uart__mcu_8h_source.html#l00039">serial_config_t::port</a>, <a class="el" href="timer__mcu_8h_source.html#l00040">timer_config_t::timer</a>, <a class="el" href="timer__mcu_8h_source.html#l00032">TIMER_A</a>, <a class="el" href="timer__mcu_8h_source.html#l00033">TIMER_B</a>, <a class="el" href="timer__mcu_8c_source.html#l00067">TimerInit()</a>, <a class="el" href="uart__mcu_8h_source.html#l00032">UART_PC</a> y <a class="el" href="uart__mcu_8c_source.html#l00107">UartInit()</a>.</p>
+
+</div>
+</div>
+<a id="a49740631bf6d49da7973c3dde5cf3dd1" name="a49740631bf6d49da7973c3dde5cf3dd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49740631bf6d49da7973c3dde5cf3dd1">&#9670;&nbsp;</a></span>funcionTimerA()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void funcionTimerA </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>param</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="recuperatorio_8c_source.html#l00126">126</a> del archivo <a class="el" href="recuperatorio_8c_source.html">recuperatorio.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="recuperatorio_8c_source.html#l00102">sensar_distancia_task_handle</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="recuperatorio_8c_source.html#l00282">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="a448a5defd3cc1cb488525cc2bc9e9658" name="a448a5defd3cc1cb488525cc2bc9e9658"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a448a5defd3cc1cb488525cc2bc9e9658">&#9670;&nbsp;</a></span>funcionTimerB()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void funcionTimerB </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>param</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="recuperatorio_8c_source.html#l00137">137</a> del archivo <a class="el" href="recuperatorio_8c_source.html">recuperatorio.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="recuperatorio_8c_source.html#l00108">medir_peso_task_handle</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="recuperatorio_8c_source.html#l00282">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="a0854a3b0a6bf9637ee6da9637bcae64c" name="a0854a3b0a6bf9637ee6da9637bcae64c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0854a3b0a6bf9637ee6da9637bcae64c">&#9670;&nbsp;</a></span>FuncionUART()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FuncionUART </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>param</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configuración de la UART. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">param</td><td>Puntero a parámetros de la UART </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="recuperatorio_8c_source.html#l00264">264</a> del archivo <a class="el" href="recuperatorio_8c_source.html">recuperatorio.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="gpio__mcu_8h_source.html#l00070">GPIO_18</a>, <a class="el" href="gpio__mcu_8c_source.html#l00086">GPIOOff()</a>, <a class="el" href="gpio__mcu_8c_source.html#l00081">GPIOOn()</a>, <a class="el" href="uart__mcu_8h_source.html#l00032">UART_PC</a> y <a class="el" href="uart__mcu_8c_source.html#l00142">UartReadByte()</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="recuperatorio_8c_source.html#l00282">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="a50ec905c4c758da24a08903af45b6e9b" name="a50ec905c4c758da24a08903af45b6e9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50ec905c4c758da24a08903af45b6e9b">&#9670;&nbsp;</a></span>inicializarGPIO()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void inicializarGPIO </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structgpio_config__t.html">gpioConfig_t</a> *&#160;</td>
+          <td class="paramname"><em>vectorGpio</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cantidad</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inicializa los pines y la dirección en los que van a trabajar (input o output) </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vectorGpio</td><td>Puntero a vector que contiene datos de tipo struct <a class="el" href="structgpio_config__t.html" title="Estructura utilizada para configurar los pines GPIO.">gpioConfig_t</a> </td></tr>
+    <tr><td class="paramname">cantidad</td><td>Número de elementos en el vector de configuración GPIO </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="recuperatorio_8c_source.html#l00251">251</a> del archivo <a class="el" href="recuperatorio_8c_source.html">recuperatorio.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="gpio__mcu_8c_source.html#l00067">GPIOInit()</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="recuperatorio_8c_source.html#l00282">app_main()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las variables</h2>
+<a id="a3139244bfb778557108cda2114f91f3f" name="a3139244bfb778557108cda2114f91f3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3139244bfb778557108cda2114f91f3f">&#9670;&nbsp;</a></span>distance</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">distance</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Variable uint16_t que almacena el valor de la distancia medida por el sensor HC-SR04. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="recuperatorio_8c_source.html#l00076">76</a> del archivo <a class="el" href="recuperatorio_8c_source.html">recuperatorio.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="hc__sr04_8c_source.html#l00045">HcSr04ReadDistanceInCentimeters()</a> y <a class="el" href="hc__sr04_8c_source.html#l00067">HcSr04ReadDistanceInInches()</a>.</p>
+
+</div>
+</div>
+<a id="a86499db61c7fb22b7edc398554cbc9d9" name="a86499db61c7fb22b7edc398554cbc9d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86499db61c7fb22b7edc398554cbc9d9">&#9670;&nbsp;</a></span>distance_samples</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">distance_samples</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Variable uint16_t que almacena el valor de la distancia medida por el sensor HC-SR04. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="recuperatorio_8c_source.html#l00082">82</a> del archivo <a class="el" href="recuperatorio_8c_source.html">recuperatorio.c</a>.</p>
+
+</div>
+</div>
+<a id="ae9557f02952bb7b3a98e9699c77b3055" name="ae9557f02952bb7b3a98e9699c77b3055"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9557f02952bb7b3a98e9699c77b3055">&#9670;&nbsp;</a></span>medir_peso_task_handle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">medir_peso_task_handle = <a class="el" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Identificador de tarea que se encarga de medir el peso del camion. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="recuperatorio_8c_source.html#l00108">108</a> del archivo <a class="el" href="recuperatorio_8c_source.html">recuperatorio.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="recuperatorio_8c_source.html#l00137">funcionTimerB()</a>.</p>
+
+</div>
+</div>
+<a id="acc18296609ce2f5a540c32bc8e643174" name="acc18296609ce2f5a540c32bc8e643174"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc18296609ce2f5a540c32bc8e643174">&#9670;&nbsp;</a></span>peso1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">peso1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Variable uint16_t que almacena el valor del peso galga 1. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="recuperatorio_8c_source.html#l00088">88</a> del archivo <a class="el" href="recuperatorio_8c_source.html">recuperatorio.c</a>.</p>
+
+</div>
+</div>
+<a id="a61eb6267c2f8fb3c23f3bd97031f9fca" name="a61eb6267c2f8fb3c23f3bd97031f9fca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61eb6267c2f8fb3c23f3bd97031f9fca">&#9670;&nbsp;</a></span>peso2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">peso2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Variable uint16_t que almacena el valor del peso galga 2. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="recuperatorio_8c_source.html#l00094">94</a> del archivo <a class="el" href="recuperatorio_8c_source.html">recuperatorio.c</a>.</p>
+
+</div>
+</div>
+<a id="a6cf7130fcc848cf6d96666653d364d42" name="a6cf7130fcc848cf6d96666653d364d42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cf7130fcc848cf6d96666653d364d42">&#9670;&nbsp;</a></span>sensar_distancia_task_handle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TaskHandle_t sensar_distancia_task_handle = <a class="el" href="ili9341_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="recuperatorio_8c_source.html#l00102">102</a> del archivo <a class="el" href="recuperatorio_8c_source.html">recuperatorio.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="recuperatorio_8c_source.html#l00126">funcionTimerA()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a class="el" href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a class="el" href="dir_bec49aa929b2333ea781d88dd96170b0.html">recuperatorio</a></li><li class="navelem"><a class="el" href="dir_6267c7e509f57aeb1f1118df811c00f6.html">main</a></li><li class="navelem"><a class="el" href="recuperatorio_8c.html">recuperatorio.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
+</body>
+</html>

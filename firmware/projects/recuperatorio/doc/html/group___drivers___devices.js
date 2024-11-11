@@ -2,6 +2,7 @@ var group___drivers___devices =
 [
     [ "Buzzer", "group___b_u_z_z_e_r.html", "group___b_u_z_z_e_r" ],
     [ "Buzzer Melodies", "group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html", "group___b_u_z_z_e_r___m_e_l_o_d_i_e_s" ],
+    [ "DHT11", "group___d_h_t11.html", "group___d_h_t11" ],
     [ "Icons", "group___i_c_o_n_s.html", "group___i_c_o_n_s" ],
     [ "HC SR04", "group___h_c___s_r04.html", "group___h_c___s_r04" ],
     [ "HX711", "group___h_x711.html", null ],

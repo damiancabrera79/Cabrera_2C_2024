@@ -4,6 +4,7 @@ var annotated_dup =
     [ "ble_config_t", "structble__config__t.html", "structble__config__t" ],
     [ "char_info_t", "structchar__info__t.html", "structchar__info__t" ],
     [ "CMD_t", "struct_c_m_d__t.html", "struct_c_m_d__t" ],
+    [ "dht11_reading", "structdht11__reading.html", "structdht11__reading" ],
     [ "digital_io_t", "structdigital__io__t.html", "structdigital__io__t" ],
     [ "esp_hidd_cb_param_t", "unionesp__hidd__cb__param__t.html", "unionesp__hidd__cb__param__t" ],
     [ "Font_t", "struct_font__t.html", "struct_font__t" ],
